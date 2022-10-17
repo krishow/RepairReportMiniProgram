@@ -1,0 +1,15 @@
+/* pages/privacy/privacy.wxss */
+.title{
+	font-size: 40rpx;
+}
+
+.subTitle{
+	margin-top: 34rpx;
+	font-size: 36rpx;
+}
+
+.date{
+	margin-top: 50rpx;
+	margin-right: 30rpx;
+	float:right;
+}

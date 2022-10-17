@@ -1,0 +1,35 @@
+<van-search model:value="{{searchValue}}" placeholder="请输入搜索关键词" bind:search="onSearch" />
+<!-- 下拉菜单 -->
+<van-dropdown-menu>
+      <van-dropdown-item bind:change="changeType" value="{{ type }}" options="{{ option1 }}" />
+    </van-dropdown-menu>
+    <!-- 详细信息 -->
+    <view class="notice" wx:for="{{notice}}" wx:for-index='i' wx:key="i">
+	    <view class="head">
+		    <image class="avatar" src="{{item.avatar}}" alt=""/>
+		    <text class="title">{{item.nickName}}</text>
+	    </view>
+	    <view class="content">
+		    <text class="content_detail">{{item.content}}</text>
+        <view class="content_img" >
+          <image class="content_img_item" bindtap="previewImg" data-i="{{i}}" data-index="{{index}}" wx:for="{{item.cloudPath}}"  wx:key="index" wx:for-item="img" src="{{img.fileID}}" alt=""/>
+        </view>
+	    </view>
+       <view class="type"><icon class="iconfont icon-wuyebaoxiu"></icon><text>{{option1[item.type].text}}</text></view>
+	    <view class="footer">
+   
+		    <icon class="iconfont icon-shizhong"></icon><text class="time">{{item.time}}</text>
+		    <icon bindtap="showPopup" data-index="{{item._id}}" class="iconfont icon-pinglun">评论</icon>
+		
+
+	    </view>
+      <view class="commentList" wx:for="{{item.comment}}" wx:key="index" wx:for-item="comment">
+        <image class="avatar" src="{{comment.avatar}}" alt=""/>
+		    <text class="title">{{comment.nickName}}</text>
+        <text class="commentInfo">{{comment.commentInfo}}</text> 
+      </view>
+    </view>
+    	<mp-half-screen-dialog wx:key="index" bindbuttontap="buttontap" show="{{show}}" maskClosable="{{false}}" title="评论">
+      <textarea slot="desc" class="commnet" model:value="{{comment}}" focus="{{show}}" placeholder="请输入评论" name="" id="" cols="30" rows="10"></textarea>
+      <button slot='footer' type="primary" bindtap="submitComment">提交</button>
+    </mp-half-screen-dialog>

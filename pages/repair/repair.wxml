@@ -1,0 +1,83 @@
+<van-cell-group class="baseInfo">
+  <van-cell title-width="150rpx">
+  <view class="title" slot="title">
+    <text class="requiredSymbol">*</text>
+    <text>姓名</text>
+  </view>
+  <input class="inputRight" type="text" model:value="{{nickName}}" name="" id="" placeholder="请输入姓名"/>
+</van-cell>
+<van-cell title-width="150rpx">
+  <view class="title" slot="title">
+    <text class="requiredSymbol">*</text>
+    <text>手机号码</text>
+  </view>
+  <input class="inputRight" type="text" model:value="{{tel}}" name="" id="" placeholder="请输入手机号"/>
+</van-cell>
+<van-cell title-width="150rpx">
+  <view class="title" slot="title">
+    <text class="requiredSymbol">*</text>
+    <text>楼栋号</text>
+  </view>
+  <view class="floor">
+    <input class="inputRight floorInput" model:value="{{state}}" type="text" name="" id=""/>期
+    <input class="inputRight floorInput" model:value="{{building}}" type="text" name="" id=""/>栋
+    <input class="inputRight floorInput" model:value="{{cell}}" type="text" name="" id=""/>单元
+    <input class="inputRight floorInput" model:value="{{number}}" type="text" name="" id=""/>号
+  </view>
+  
+</van-cell>
+</van-cell-group>
+
+<van-cell-group class="detailInfo">
+  <van-cell center title-width="150rpx">
+  <view class="title" slot="title">
+    <text class="requiredSymbol">*</text>
+    <text>是否公开</text>
+  </view>
+  <view class="cellValue">
+    <van-switch
+    checked="{{ isPublic }}"
+    active-color="#3a9ced"
+    inactive-color="#eee"
+    size="24px"
+    bind:change="onChange"/>
+    <text class="desc" hidden="{{isPublic}}">（仅管理员可见）</text>
+    <text class="desc" hidden="{{!isPublic}}">（所有人可见）</text>
+  </view>
+</van-cell>
+<van-cell center title-width="150rpx">
+  <view class="title" slot="title">
+    <text class="requiredSymbol">*</text>
+    <text>故障分类</text>
+  </view>
+  <view class="cellValue">
+    <van-dropdown-menu>
+      <van-dropdown-item bind:change="changeType" value="{{ type }}" options="{{ option1 }}" />
+    </van-dropdown-menu>
+</view>
+</van-cell>
+<van-cell use-label-slot>
+  <view class="title" slot="title">
+    <text class="requiredSymbol">*</text>
+    <text>上传故障图片（最多9张）</text>
+  </view>
+  <van-uploader slot="label"
+  file-list="{{ fileList }}"
+  max-count="9"
+  upload-icon="plus"
+  bind:after-read="afterRead"
+/>
+  
+</van-cell>
+<van-cell use-label-slot>
+  <view class="title" slot="title">
+    <text class="requiredSymbol">*</text>
+    <text>故障描述（500字以内）</text>
+  </view>
+  <textarea class="content" model:value="{{content}}" slot="label" placeholder="请输入说明问题" name="" id="" cols="30" rows="10"></textarea>
+</van-cell>
+</van-cell-group>
+
+<button class="submitBtn" bindtap="uploadToCloud">提交</button>
+<button class="saveBtn" bindtap="saveText">保存草稿</button>
+<button class="delSaveBtn" bindtap="deleteSave">删除草稿</button>

@@ -1,0 +1,62 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/find/find",
+        "pages/user/user",
+        "pages/repair/repair",
+        "pages/repairsearch/repairsearch",
+        "pages/login/login",
+        "pages/privacy/privacy"
+    ],
+    "tabBar": {
+        "color": "#000000",
+        "selectedColor": "#3a9ced",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "icons/zhuye_1.png",
+                "selectedIconPath": "icons/zhuye.png"
+            },
+            {
+                "pagePath": "pages/find/find",
+                "text": "发现",
+                "iconPath": "icons/faxian_1.png",
+                "selectedIconPath": "icons/faxian.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "个人中心",
+                "iconPath": "icons/gerenzhongxin_1.png",
+                "selectedIconPath": "icons/gerenzhongxin.png"
+            }
+        ]
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "瑞和园小区报修",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "van-button": "@vant/weapp/button/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-search": "@vant/weapp/search/index",
+        "van-grid": "@vant/weapp/grid/index",
+        "van-grid-item": "@vant/weapp/grid-item/index",
+        "van-switch": "@vant/weapp/switch/index",
+        "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+        "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+        "van-uploader": "@vant/weapp/uploader/index",
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index",
+        "van-popup": "@vant/weapp/popup/index",
+        "van-checkbox": "@vant/weapp/checkbox/index",
+        "van-checkbox-group": "@vant/weapp/checkbox-group/index"
+    },
+    "useExtendedLib": {
+        "weui":true
+    }
+}

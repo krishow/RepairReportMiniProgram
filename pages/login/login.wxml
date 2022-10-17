@@ -1,0 +1,6 @@
+
+<image src="/icons/favicon.png"></image>
+
+<button type="primary" disabled="{{!checked}}" bindtap="login">登录</button>
+<button type="default" bindtap="back">返回</button>
+<van-checkbox checked-color="#3a9ced" value="{{ checked }}" bind:change="onChange">登录代表您已同意<navigator class="privacy" url="/pages/privacy/privacy">用户隐私协议</navigator></van-checkbox>

@@ -1,0 +1,74 @@
+page{
+	background-color: #eee;
+}
+.notice{
+	background-color: #fff;
+	margin: 20rpx 0;
+	border-radius: 10rpx;
+}
+.head{
+	height: 100rpx;
+	line-height: 100rpx;
+	border-bottom: 1px solid #eee;
+}
+
+.head .avatar{
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+	vertical-align: middle;
+	border: none;
+}
+.head .title{
+	line-height: 100rpx;
+	font-size: 30rpx;
+}
+.type{
+	color: #999;
+	margin-left: 30rpx;
+}
+.footer{
+	height: 80rpx;
+	line-height: 80rpx;
+	color: orange;
+}
+.icon-pinglun{
+	float: right;
+}
+
+.content_img_item{
+	width: 33%;
+	height: 200rpx;
+	border: none;
+	margin-left: 20rpx;
+}
+
+.comment{
+	border: 5rpx solid #eee;
+	border-radius: 10rpx;
+	padding: 10rpx;
+	font-size: 28rpx;
+}
+.commentList{
+	height: 100rpx;
+	line-height: 100rpx;
+	border-bottom: 1px solid #eee;
+	display: flex;
+	align-items: center;
+}
+
+.commentList .avatar{
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+	vertical-align: middle;
+	border: none;
+}
+.commentList .title{
+	line-height: 100rpx;
+	font-size: 20rpx;
+}
+.commentList .commentInfo{
+	line-height: 100rpx;
+	margin-left: 20rpx;
+}

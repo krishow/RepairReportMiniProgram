@@ -1,0 +1,14 @@
+<view class="repair_menu report_repair" bindtap="handleReport">
+  <icon class="iconfont icon-wuyebaoxiu"></icon>
+  <view class="menu">
+      <view class="menu_title">我要报修</view>
+      <view class="menu_desc">随时提交，方便快捷</view>
+  </view>
+</view>
+<view class="repair_menu search_repair" bindtap="handleSearch">
+  <icon class="iconfont icon-chaxun"></icon>
+  <view class="menu">
+    <view class="menu_title">报修查询</view>
+    <view class="menu_desc">查看报修进度</view>
+  </view>
+</view>

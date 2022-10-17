@@ -1,0 +1,25 @@
+<view class="bg">
+	<view class="userInfo" wx:if="{{!hasUserInfo}}" bindtap="toLogin">
+		<image class="avatar" src=""></image>
+		<view class="user">
+			<view class="userName">未登录</view>
+			<view class="userRole">普通用户</view>
+		</view>
+	</view>
+	<view class="userInfo" wx:if="{{hasUserInfo}}" bindtap="logout">
+		<image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+		<view class="user">
+			<view class="userName">{{userInfo.nickName}}</view>
+			<view class="userRole">普通用户</view>
+		</view>
+		<view class="logout">退出登录</view>
+	</view>
+	<view class="menu">
+		<van-grid square>
+  			<van-grid-item bindtap="goUnhandle" use-slot><icon class="iconfont icon-shizhong"></icon><text class="menu_title">待处理</text></van-grid-item>
+  			<van-grid-item bindtap="goHandling" use-slot><icon class="iconfont icon-cycle"></icon><text class="menu_title">处理中</text></van-grid-item>
+  			<van-grid-item bindtap="goFinished" use-slot><icon class="iconfont" size="28" type="success"></icon><text class="menu_title">已完成</text></van-grid-item>
+  			<van-grid-item bindtap="goUnhandle" use-slot><icon class="iconfont icon-quanbufenlei"></icon><text class="menu_title">全部分类</text></van-grid-item>
+		</van-grid>
+	</view>
+</view>

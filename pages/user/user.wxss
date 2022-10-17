@@ -1,0 +1,72 @@
+page{
+	background-color: #eee;
+}
+.bg{
+	height: 300rpx;
+	background-color: #3a9ced;
+	position: relative;
+	z-index: 1;
+}
+
+.userInfo{
+	position: absolute;
+	height: 200rpx;
+	width: 100%;
+	margin-top: 30rpx;
+	padding: 0 50rpx;
+	display: flex;
+	color: #fff;
+}
+.userInfo .avatar{
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50%;
+	background-color: #aaa;
+	border: 1px solid #fff;
+	align-self: center;
+}
+.user{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-left: 20rpx;
+}
+.user .userName{
+	font-weight: 700;
+  	font-size: 40rpx;
+}
+.user .userRole{
+	font-size: 30rpx;
+}
+.logout{
+	align-self: center;
+	margin-left: 200rpx;
+}
+
+.menu{
+	position: absolute;
+	width: 90%;
+	left: 50%;
+	bottom: -100rpx;
+	transform: translate(-50%,0);
+}
+.van-grid{
+	border-radius: 10rpx;
+}
+.iconfont{
+	font-size: 60rpx;
+}
+.menu_title{
+	color: #666;
+	line-height: 50rpx;
+	font-size: 30rpx;
+}
+.icon-shizhong{
+	color: orange;
+}
+.icon-cycle{
+	color: #3a9ced;
+}
+.icon-quanbufenlei{
+	color: gold;
+}
